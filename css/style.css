@@ -1,0 +1,136 @@
+body {
+    background-image: url(../img/background.webp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.wrapper {
+    background-color: rgb(76, 23, 126);
+    height: 90vh;
+    width: 900px;
+    border-radius: 20px;
+    border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ghost {
+    position: relative;
+    width: 160px;
+    height: 200px;
+
+}
+
+.body {
+    position: relative;
+    width: 160px;
+    height: 200px;
+    background-color: white;
+    border-top-right-radius: 80px;
+    border-top-left-radius: 80px;
+    animation: float 4s ease infinite;
+
+
+}
+
+.face {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 67px;
+    left: 37px;
+    width: 72px;
+    height: 41px;
+}
+
+.eye {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: black;
+
+}
+
+.eye.left {
+    margin-right: 32px;
+}
+
+.smile {
+    margin-top: 6px;
+    width: 32px;
+    height: 16px;
+    background-color: black;
+    margin-left: 20px;
+    border-bottom-left-radius: 16px 12px;
+    border-bottom-right-radius: 16px 12px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.rosy {
+    position: absolute;
+    top: 28px;
+    width: 22px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: pink;
+}
+
+.rosy.left {
+    left: -6px;
+    transform: rotate(-8deg);
+}
+
+.rosy.right {
+    right: -6px;
+    transform: rotate(8deg);
+}
+
+.arm {
+    position: absolute;
+    top: 136px;
+    width: 60px;
+    height: 40px;
+    background-color: white;
+}
+
+.arm.left {
+    left: -40px;
+    border-radius: 60% 100%;
+    animation: arms-left 4s ease infinite;
+}
+
+.arm.right {
+    right: -40px;
+    border-radius: 100% 60%;
+    animation: arms-right 4s ease infinite;
+}
+
+.bottom {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: -1px;
+}
+
+div {
+    flex-grow: 1;
+    position: relative;
+    top: -14px;
+    height: 28px;
+    border-radius: 100%;
+    background-color: white;
+
+}
+
+div:nth-child(2n){
+    top: -10px;
+    margin: 0 -2px;
+    border-top: 10px solid white;
+    background-color: transparent;
+}
