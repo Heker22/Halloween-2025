@@ -7,6 +7,15 @@ body {
     margin: 0;
 }
 
+.title{
+    font-size: 52px;
+    font-weight: 700;
+    color: orange;
+    position: absolute;
+    top: 100px;
+}
+
+
 .wrapper {
     background-color: rgb(76, 23, 126);
     height: 90vh;
@@ -16,6 +25,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .ghost {
@@ -92,7 +102,7 @@ body {
 
 .arm {
     position: absolute;
-    top: 136px;
+    top: 110px;
     width: 60px;
     height: 40px;
     background-color: white;
@@ -118,7 +128,7 @@ body {
     right: -1px;
 }
 
-div {
+.box {
     flex-grow: 1;
     position: relative;
     top: -14px;
@@ -128,9 +138,42 @@ div {
 
 }
 
-div:nth-child(2n){
+.box:nth-child(2n){
     top: -10px;
     margin: 0 -2px;
     border-top: 10px solid white;
     background-color: transparent;
+}
+
+.shadow{
+    position: absolute;
+    bottom: -100px;
+    left: -5%;
+    width: 200px;
+    border-radius: 100%;
+    height: 12px;
+    background-color: gray;
+    animation: shadow 4s ease infinite;
+}
+
+
+@keyframes float{
+    0%, 100% {top:0px}
+    40% {top:-70px}
+}
+
+
+@keyframes arms-left{
+    0%, 100% {transform: translate(0%, -50%) rotate(50deg);}
+    40% {transform: translate(0%, -50%) rotate(40deg);}
+}
+
+@keyframes arms-right{
+    0%, 100% {transform: translate(0%, -50%) rotate(-50deg);}
+    40% {transform: translate(0%, -50%) rotate(-40deg);}
+}
+
+@keyframes shadow{
+    0%, 100% {transform: translateX(0%) scale(1);}
+    40% {transform: translateX(0%) scale(0.7);}
 }
